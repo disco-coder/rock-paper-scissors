@@ -16,7 +16,35 @@
           return "scissors";
         }
       }
-      
+
+      function playRound(playerSelection, computerSelection) {
+        if (playerSelection == "rock") {
+          if (computerSelection == "rock") {
+            return "It's a draw!";
+          } else if (computerSelection == "paper") {
+            return "Paper beats Rock, you lose!";
+          } else {
+            return "Rock beats Scissors, you win!";
+          }
+        } else if (playerSelection == "paper") {
+          if (computerSelection == "paper") {
+            return "It's a draw!";
+          } else if (computerSelection == "rock") {
+            return "Paper beats Rock, you win!";
+          } else {
+            return "Scissors beat Paper, you lose!";
+          }
+        } else {
+          if (computerSelection == "scissors") {
+            return "It's a draw";
+          } else if (computerSelection == "paper") {
+            return "Scissors beat Paper, you win!";
+          } else {
+            return "Rock beats Scissors, you lose!";
+          }
+        }
+      }
+    
     </script>
   </body>
 </html>
