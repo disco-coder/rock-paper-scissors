@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <script>
+      
+      function computerPlay() {
+        let randomRoll = Math.random()
+        if (randomRoll < (1/3)) {
+          return "rock";
+        } else if (randomRoll > (1/3) && randomRoll < (2 * 1/3)) {
+          return "paper";
+        } else {
+          return "scissors";
+        }
+      }
+      
+    </script>
+  </body>
+</html>
