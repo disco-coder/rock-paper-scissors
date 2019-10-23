@@ -53,7 +53,7 @@ function playRound(playerSelection, computerSelection) {
                 playerWins = 0;
             }
             if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS GAME";
+                announcer.textContent = "COMPUTER WINS THE GAME";
                 computerWins = 0;
                 playerWins = 0;
             }
@@ -71,7 +71,7 @@ function playRound(playerSelection, computerSelection) {
                 playerWins = 0;
             }
             if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS GAME";
+                announcer.textContent = "COMPUTER WINS THE GAME";
                 computerWins = 0;
                 playerWins = 0;
             }
@@ -89,7 +89,7 @@ function playRound(playerSelection, computerSelection) {
                 playerWins = 0;
             }
             if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS GAME";
+                announcer.textContent = "COMPUTER WINS THE GAME";
                 computerWins = 0;
                 playerWins = 0;
             }
@@ -108,7 +108,7 @@ function playRound(playerSelection, computerSelection) {
                 playerWins = 0;
             }
             if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS GAME";
+                announcer.textContent = "COMPUTER WINS THE GAME";
                 computerWins = 0;
                 playerWins = 0;
             }
@@ -126,7 +126,7 @@ function playRound(playerSelection, computerSelection) {
                 playerWins = 0;
             }
             if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS GAME";
+                announcer.textContent = "COMPUTER WINS THE GAME";
                 computerWins = 0;
                 playerWins = 0;
             }
@@ -144,7 +144,7 @@ function playRound(playerSelection, computerSelection) {
                 playerWins = 0;
             }
             if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS GAME";
+                announcer.textContent = "COMPUTER WINS THE GAME";
                 computerWins = 0;
                 playerWins = 0;
             }
@@ -163,7 +163,7 @@ function playRound(playerSelection, computerSelection) {
                 playerWins = 0;
             }
             if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS GAME";
+                announcer.textContent = "COMPUTER WINS THE GAME";
                 computerWins = 0;
                 playerWins = 0;
             }
@@ -181,7 +181,7 @@ function playRound(playerSelection, computerSelection) {
                 playerWins = 0;
             }
             if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS GAME";
+                announcer.textContent = "COMPUTER WINS THE GAME";
                 computerWins = 0;
                 playerWins = 0;
             }
@@ -199,7 +199,7 @@ function playRound(playerSelection, computerSelection) {
                 playerWins = 0;
             }
             if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS GAME";
+                announcer.textContent = "COMPUTER WINS THE GAME";
                 computerWins = 0;
                 playerWins = 0;
             }
