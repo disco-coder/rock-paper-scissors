@@ -23,6 +23,10 @@ body {
   font-size: 1rem;
 }
 
+#announcer {
+  font-size: 1.5rem;
+}
+
 .items {
   padding: 1.5rem;
   margin: 0 1rem;
