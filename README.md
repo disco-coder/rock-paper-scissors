@@ -2,4 +2,4 @@
 This is the *Rock Paper Scissors* project for [The Odin Project](https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors).
 
 ## Sumary
-This was a quick little project where I've mainly practiced creating functions, using their return values and using console.log() to check if my functions behave correctly.
+This was a quick little project where I've mainly practiced creating functions, using their return values and using console.log() to check if my functions behave correctly. Afterwards, I've made a really simple interface, so the game is no longer console based.
