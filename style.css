@@ -5,10 +5,15 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  font-size: 3.5rem;
+  margin-top: 2.5rem;
+}
+
 .container {
   display: flex;
-  position: relative;
-  top: 10rem;
   flex: 1;
   align-items: center;
   justify-content: center;
@@ -17,14 +22,13 @@ body {
 
 .results {
   min-height: 15vh;
-  position: relative;
-  top: 10rem;
   text-align: center;
   font-size: 1rem;
 }
 
 #score {
   font-size: 1.5rem;
+  margin-top: 2rem;
 }
 
 #roundResult {
