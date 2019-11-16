@@ -9,15 +9,15 @@ const computerScore = document.querySelector("#computerScore");
 const announcer = document.querySelector("#announcer");
 
 
-// Buttons is a node list (looks and acts similarly to an array)
-const buttons = document.querySelectorAll("button");
+// Weapons is a node list (looks and acts similarly to an array)
+const weapons = document.querySelectorAll("img");
 
-// Use .forEach to iterate through each button in the node list
-buttons.forEach((button) => {
+// Use .forEach to iterate through each weapon in the node list
+weapons.forEach((weapon) => {
   
-    // Add "click" event listener to each button
-    button.addEventListener("click", (e) => {
-    playRound(button.id, computerPlay())
+    // Add "click" event listener to each weapon
+    weapon.addEventListener("click", (e) => {
+    playRound(weapon.id, computerPlay())
     })
 })
 
