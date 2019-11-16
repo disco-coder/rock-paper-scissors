@@ -33,6 +33,19 @@ function computerPlay() {
     }
 }
 
+function declareWinner() {
+    if (playerWins === 5) {
+        announcer.textContent = "YOU WIN THIS GAME";
+        computerWins = 0;
+        playerWins = 0;
+    }
+    if (computerWins === 5) {
+        announcer.textContent = "COMPUTER WINS THE GAME";
+        computerWins = 0;
+        playerWins = 0;
+    }
+}
+
 // Plays one round of the game
 function playRound(playerSelection, computerSelection) {
     if (playerWins === 0 && computerWins === 0) {
@@ -47,16 +60,7 @@ function playRound(playerSelection, computerSelection) {
             roundResult.textContent = "It's a draw!";
             playerScore.textContent = `Player ${playerWins}  -  `;
             computerScore.textContent = `${computerWins} Computer`;
-            if (playerWins === 5) {
-                announcer.textContent = "YOU WIN THIS GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
-            if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS THE GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
+            declareWinner()
             return
         } else if (computerSelection == "paper") {
             playerRoll.textContent = `You played ${playerSelection}`;
@@ -65,16 +69,7 @@ function playRound(playerSelection, computerSelection) {
             ++computerWins;
             playerScore.textContent = `Player ${playerWins}  -  `;
             computerScore.textContent = `${computerWins} Computer`;
-            if (playerWins === 5) {
-                announcer.textContent = "YOU WIN THIS GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
-            if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS THE GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
+            declareWinner()
             return
         } else {
             playerRoll.textContent = `You played ${playerSelection}`;
@@ -83,16 +78,7 @@ function playRound(playerSelection, computerSelection) {
             ++playerWins;
             playerScore.textContent = `Player ${playerWins}  -  `;
             computerScore.textContent = `${computerWins} Computer`;
-            if (playerWins === 5) {
-                announcer.textContent = "YOU WIN THIS GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
-            if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS THE GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
+            declareWinner()
             return
         }
     } else if (playerSelection == "paper") {
@@ -102,16 +88,7 @@ function playRound(playerSelection, computerSelection) {
             roundResult.textContent = "It's a draw!";
             playerScore.textContent = `Player ${playerWins}  -  `;
             computerScore.textContent = `${computerWins} Computer`;
-            if (playerWins === 5) {
-                announcer.textContent = "YOU WIN THIS GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
-            if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS THE GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
+            declareWinner()
             return
         } else if (computerSelection == "rock") {
             playerRoll.textContent = `You played ${playerSelection}`;
@@ -120,16 +97,7 @@ function playRound(playerSelection, computerSelection) {
             ++playerWins;
             playerScore.textContent = `Player ${playerWins}  -  `;
             computerScore.textContent = `${computerWins} Computer`;
-            if (playerWins === 5) {
-                announcer.textContent = "YOU WIN THIS GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
-            if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS THE GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
+            declareWinner()
             return
         } else {
             playerRoll.textContent = `You played ${playerSelection}`;
@@ -138,16 +106,7 @@ function playRound(playerSelection, computerSelection) {
             ++computerWins;
             playerScore.textContent = `Player ${playerWins}  -  `;
             computerScore.textContent = `${computerWins} Computer`;
-            if (playerWins === 5) {
-                announcer.textContent = "YOU WIN THIS GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
-            if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS THE GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
+            declareWinner()
             return
         }
     } else {
@@ -157,16 +116,7 @@ function playRound(playerSelection, computerSelection) {
             roundResult.textContent = "It's a draw!";
             playerScore.textContent = `Player ${playerWins}  -  `;
             computerScore.textContent = `${computerWins} Computer`;
-            if (playerWins === 5) {
-                announcer.textContent = "YOU WIN THIS GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
-            if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS THE GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
+            declareWinner()
             return
         } else if (computerSelection == "paper") {
             playerRoll.textContent = `You played ${playerSelection}`;
@@ -175,16 +125,7 @@ function playRound(playerSelection, computerSelection) {
             ++playerWins;
             playerScore.textContent = `Player ${playerWins}  -  `;
             computerScore.textContent = `${computerWins} Computer`;
-            if (playerWins === 5) {
-                announcer.textContent = "YOU WIN THIS GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
-            if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS THE GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
+            declareWinner()
             return
         } else {
             playerRoll.textContent = `You played ${playerSelection}`;
@@ -193,16 +134,7 @@ function playRound(playerSelection, computerSelection) {
             ++computerWins;
             playerScore.textContent = `Player ${playerWins}  -  `;
             computerScore.textContent = `${computerWins} Computer`;
-            if (playerWins === 5) {
-                announcer.textContent = "YOU WIN THIS GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
-            if (computerWins === 5) {
-                announcer.textContent = "COMPUTER WINS THE GAME";
-                computerWins = 0;
-                playerWins = 0;
-            }
+            declareWinner()
             return
         }
     }    
