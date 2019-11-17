@@ -1,22 +1,27 @@
-// Variables for player scores
+// Variables
 let playerWins = 0;
 let computerWins = 0;
+let playerWeapon;
+let computerWeapon;
 const playerRoll = document.querySelector("#playerRoll");
 const computerRoll = document.querySelector("#computerRoll");
 const roundResult = document.querySelector("#roundResult");
 const playerScore = document.querySelector("#playerScore");
 const computerScore = document.querySelector("#computerScore");
-const announcer = document.querySelector("#announcer");
+const rockURL = "https://img.icons8.com/ios/512/000000/rock.png";
+const paperURL = "https://img.icons8.com/ios/500/000000/toilet-paper.png";
+const scissorsURL = "https://img.icons8.com/ios/500/000000/scissors.png";
+const rollDiv = document.querySelector("#rollDiv");
 
 
 // Weapons is a node list (looks and acts similarly to an array)
-const weapons = document.querySelectorAll("img");
+const weapons = document.querySelectorAll(".items");
 
 // Use .forEach to iterate through each weapon in the node list
 weapons.forEach((weapon) => {
-  
     // Add "click" event listener to each weapon
-    weapon.addEventListener("click", (e) => {
+    weapon.addEventListener("click", () => {
+    playerWeapon = weapon.id
     playRound(weapon.id, computerPlay())
     })
 })
@@ -25,25 +30,43 @@ weapons.forEach((weapon) => {
 function computerPlay() {
     let randomRoll = Math.random()
     if (randomRoll < (1/3)) {
+        computerWeapon = "rock";
         return "rock";
     } else if (randomRoll > (1/3) && randomRoll < (2 * 1/3)) {
+        computerWeapon = "paper";
         return "paper";
     } else {
+        computerWeapon = "scissors";
         return "scissors";
     }
 }
 
 function declareWinner() {
     if (playerWins === 5) {
-        announcer.textContent = "YOU WIN THIS GAME";
+        announcer.textContent = "YOU WIN THIS GAME !";
         computerWins = 0;
         playerWins = 0;
     }
     if (computerWins === 5) {
-        announcer.textContent = "COMPUTER WINS THE GAME";
+        announcer.textContent = "COMPUTER WINS THE GAME !";
         computerWins = 0;
         playerWins = 0;
     }
+}
+
+function updateScores() {
+    playerScore.textContent = `${playerWins}`;
+    computerScore.textContent = `${computerWins}`;
+}
+
+function showRolls() {
+    if (playerWeapon == "rock") playerRoll.src = rockURL;
+    if (playerWeapon == "paper") playerRoll.src = paperURL;
+    if (playerWeapon == "scissors") playerRoll.src = scissorsURL;
+    if (computerWeapon == "rock") computerRoll.src = rockURL;
+    if (computerWeapon == "paper") computerRoll.src = paperURL;
+    if (computerWeapon == "scissors") computerRoll.src = scissorsURL;
+    rollDiv.style.cssText = "display: block";
 }
 
 // Plays one round of the game
@@ -55,85 +78,58 @@ function playRound(playerSelection, computerSelection) {
     // Compare rolls, declare winner and update player scores
     if (playerSelection == "rock") {
         if (computerSelection == "rock") {
-            playerRoll.textContent = `You played ${playerSelection}`;
-            computerRoll.textContent = "Computer plays rock";
-            roundResult.textContent = "It's a draw!";
-            playerScore.textContent = `Player ${playerWins}  -  `;
-            computerScore.textContent = `${computerWins} Computer`;
+            showRolls()
+            updateScores()
             declareWinner()
             return
         } else if (computerSelection == "paper") {
-            playerRoll.textContent = `You played ${playerSelection}`;
-            computerRoll.textContent = `Computer plays ${computerSelection}`;
-            roundResult.textContent = "Paper beats rock, you lose!";
+            showRolls()
             ++computerWins;
-            playerScore.textContent = `Player ${playerWins}  -  `;
-            computerScore.textContent = `${computerWins} Computer`;
+            updateScores()
             declareWinner()
             return
         } else {
-            playerRoll.textContent = `You played ${playerSelection}`;
-            computerRoll.textContent = `Computer plays ${computerSelection}`;
-            roundResult.textContent = "Rock beats scissors, you win!";
+            showRolls()
             ++playerWins;
-            playerScore.textContent = `Player ${playerWins}  -  `;
-            computerScore.textContent = `${computerWins} Computer`;
+            updateScores()
             declareWinner()
             return
         }
     } else if (playerSelection == "paper") {
         if (computerSelection == "paper") {
-            playerRoll.textContent = `You played ${playerSelection}`;
-            computerRoll.textContent = `Computer plays ${computerSelection}`;
-            roundResult.textContent = "It's a draw!";
-            playerScore.textContent = `Player ${playerWins}  -  `;
-            computerScore.textContent = `${computerWins} Computer`;
+            showRolls()
+            updateScores()
             declareWinner()
             return
         } else if (computerSelection == "rock") {
-            playerRoll.textContent = `You played ${playerSelection}`;
-            computerRoll.textContent = `Computer plays ${computerSelection}`;
-            roundResult.textContent = "Paper beats rock, you win!";
+            showRolls()
             ++playerWins;
-            playerScore.textContent = `Player ${playerWins}  -  `;
-            computerScore.textContent = `${computerWins} Computer`;
+            updateScores()
             declareWinner()
             return
         } else {
-            playerRoll.textContent = `You played ${playerSelection}`;
-            computerRoll.textContent = `Computer plays ${computerSelection}`;
-            roundResult.textContent = "Scissors beat paper, you lose!";
+            showRolls()
             ++computerWins;
-            playerScore.textContent = `Player ${playerWins}  -  `;
-            computerScore.textContent = `${computerWins} Computer`;
+            updateScores()
             declareWinner()
             return
         }
     } else {
         if (computerSelection == "scissors") {
-            playerRoll.textContent = `You played ${playerSelection}`;
-            computerRoll.textContent = `Computer plays ${computerSelection}`;
-            roundResult.textContent = "It's a draw!";
-            playerScore.textContent = `Player ${playerWins}  -  `;
-            computerScore.textContent = `${computerWins} Computer`;
+            showRolls()
+            updateScores()
             declareWinner()
             return
         } else if (computerSelection == "paper") {
-            playerRoll.textContent = `You played ${playerSelection}`;
-            computerRoll.textContent = `Computer plays ${computerSelection}`;
-            roundResult.textContent = "Scissors beat paper, you win!";
+            showRolls()
             ++playerWins;
-            playerScore.textContent = `Player ${playerWins}  -  `;
-            computerScore.textContent = `${computerWins} Computer`;
+            updateScores()
             declareWinner()
             return
         } else {
-            playerRoll.textContent = `You played ${playerSelection}`;
-            computerRoll.textContent = `Computer plays ${computerSelection}`;
-            roundResult.textContent = "Rock beats scissors, you lose!";
+            showRolls()
             ++computerWins;
-            playerScore.textContent = `Player ${playerWins}  -  `;
-            computerScore.textContent = `${computerWins} Computer`;
+            updateScores()
             declareWinner()
             return
         }
