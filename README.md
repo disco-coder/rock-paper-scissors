@@ -1,5 +1,11 @@
-# Rock Paper Scissors
-This is the *Rock Paper Scissors* project for [The Odin Project](https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors).
+# Rock-Paper-Scissors
 
-## Sumary
-This was a quick little project where I've mainly practiced creating functions, using their return values and using console.log() to check if my functions behave correctly. Afterwards, I've made a really simple interface, so the game is no longer console based.
+A simple rock-paper-scissors game where you play vs AI.
+
+## Getting Started
+
+Click on the link in the repo's description to play the game. Click on any of the weapons and computer will play its hand.
+
+## Authors
+
+[disco-trooper](https://github.com/disco-trooper)
