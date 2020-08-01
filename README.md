@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors
 
-A simple rock-paper-scissors game where you play vs AI.
+A simple rock-paper-scissors game where you play vs AI. Project made as a part of [The Odin Project's curriculum](https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors).
 
 ## Getting Started
 
